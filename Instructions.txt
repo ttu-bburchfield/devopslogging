@@ -1,0 +1,20 @@
+Good afternoon!  Thank you for your willingness to help our Information Security Office here at SwollenHippo with streamlining our processes.  Although we work in IT Security, we are so specialized that we are not familiar with DevOps, development, or many other IT disciplines - so please excuse our use of non-technical jargon.
+
+Previously, we have been spending a large amount of time manually remoting to each critical server, navigating to their log directory, and reviewing the numerous logs to copy and paste any warning, information, or error entries to a directory that is later evaluated by another older system.  To help with this time sink, we have worked to implement a better solution.
+
+Firstly, we hired a vendor to create a mechanism for us to catalog all of our warning and error logs for critical systems in a single, easy to locate location.  Unfortunately, the vendor was run by a web developer that did not understand our process fully.  The result of that endeavor was a web service for this process. This web service can be located at this URL:
+
+https://www.swollenhippo.com/ITSecurity/criticalLogs.php
+
+
+From our understanding, the web service returns an array of JSON objects that looks like this:
+
+ [{logType:WARN,server:Prod-Exch-01,contents:Mailbox 905beb99-e5b0-485a-8476-114766c1978a is nearing capacity},{logType:ERROR,server:Prod-Exch-01,contents:Encryption failed},{logType:WARN,server:Dev-Web-21,contents:nodeJS package crypto is out-of-date},{logType:INFO,server:Test-Ans-02,contents:Automation playbook installGit.yaml completed}]
+
+To assist in our process, we need you to create a solution that will allow us to utilize the web service to catalog our logs into directories that will later be processed by an existing system we have.  We would like to later run the solution as a scheduled job so the solution cannot require interactive prompts.
+
+The result of the solution should allow us to process a particular log type (currently ERROR,WARN, OR INFO) and create a log file with the current date.  These files should then be placed in a logs directory. For example, if we run the solution with the parameter ERROR, it will create or append a new file with today's date (18-APR-2024ERROR.log) with all the ERROR type logs and store it here "logs/18-APR-2024ERROR.log".  If we run the solution with the parameter INFO, it would create or append the 18-APR-2024INFO.log and store it here logs/18-APR-2024INFO.log
+
+Additional Assignment Information:
+
+Make sure you include comments in your code including a comment block at the top that gives the author, date, and a SHORT description about what the script does.  Also, you MUST use the prefixes on all variables that we use in class - obj, int, str, etc.  You may NOT use generative AI on this assignment. 
