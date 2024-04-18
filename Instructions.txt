@@ -17,4 +17,4 @@ The result of the solution should allow us to process a particular log type (cur
 
 Additional Assignment Information:
 
-Make sure you include comments in your code including a comment block at the top that gives the author, date, and a SHORT description about what the script does.  Also, you MUST use the prefixes on all variables that we use in class - obj, int, str, etc.  You may NOT use generative AI on this assignment. 
+Make sure you include comments in your code including a comment block at the top that gives the author, date, a SHORT description about what the script does, and the command(s) you used to retrieve this information from the provided GitHub repository.  Also, you MUST use the prefixes on all variables that we use in class - obj, int, str, etc.  You may NOT use generative AI on this assignment. 
