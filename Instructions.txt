@@ -13,7 +13,12 @@ From our understanding, the web service returns an array of JSON objects that lo
 
 To assist in our process, we need you to create a solution that will allow us to utilize the web service to catalog our logs into directories that will later be processed by an existing system we have.  We would like to later run the solution as a scheduled job so the solution cannot require interactive prompts.
 
-The result of the solution should allow us to process a particular log type (currently ERROR,WARN, OR INFO) and create a log file with the current date.  These files should then be placed in a logs directory. For example, if we run the solution with the parameter ERROR, it will create or append a new file with today's date (18-APR-2024ERROR.log) with all the ERROR type logs and store it here "logs/18-APR-2024ERROR.log".  If we run the solution with the parameter INFO, it would create or append the 18-APR-2024INFO.log and store it here logs/18-APR-2024INFO.log
+The result of the solution should allow us to process a particular log type (currently ERROR,WARN, OR INFO) and create a log file with the current date.  These files should then be placed in a logs directory. For example, if we run the solution with the parameter ERROR, it will create or append a new file with today's date (18-APR-2024ERROR.log) with all the ERROR type logs and store it here "logs/18-APR-2024ERROR.log".  The format of the log should be the logType,server,contents.  An example of a log would look like this:
+
+ERROR,Prod-Exch-01,Encryption failed
+ERROR,Test-Ans-02,Failed login
+
+If we run the solution with the parameter INFO, it would create or append the 18-APR-2024INFO.log and store it here logs/18-APR-2024INFO.log.  If we run the solution with the parameter WARN, it would create or append the 18-APR-2024WARN.log
 
 Additional Assignment Information:
 
